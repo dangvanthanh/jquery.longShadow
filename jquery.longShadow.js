@@ -1,7 +1,7 @@
 /*
 * LongShadow jQuery Plugin
 * Copyright (c) 2013 Dang Van Thanh
-* Version: 1.0.0
+* Version: 1.0.1
 * Source: git://github.com/dangvanthanh/jquery.longShadow.git
 * Licensed under MIT 
 */
@@ -35,10 +35,9 @@
 					color = this.options.colorShadow;
 
 			for (var i = 0; i < this.options.sizeShadow; i++) {
-				var opposite = i * -1;
 				switch (this.options.directionShadow) {
 					case 'top':
-						textshadow += '0 ' + opposite + 'px 0' + color + ',';
+						textshadow += '0 ' + -i + 'px 0' + color + ',';
 						break;
 					case 'right':
 						textshadow += i + 'px 0 0 ' + color + ',';
@@ -47,16 +46,16 @@
 						textshadow += '0 ' + i + 'px 0 ' + color + ',';
 						break;
 					case 'left':
-						textshadow += opposite + 'px ' + '0 0 ' + color + ',';
+						textshadow += -i + 'px ' + '0 0 ' + color + ',';
 						break;
 					case 'top-left':
-						textshadow += opposite + 'px ' + opposite + 'px 0 ' + color + ',';
+						textshadow += -i + 'px ' + -i + 'px 0 ' + color + ',';
 						break;
 					case 'top-right':
-						textshadow += i + 'px ' + opposite + 'px 0 ' + color + ',';
+						textshadow += i + 'px ' + -i + 'px 0 ' + color + ',';
 						break;
 					case 'bottom-left':
-						textshadow += opposite + 'px ' + i + 'px 0 ' + color + ',';
+						textshadow += -i + 'px ' + i + 'px 0 ' + color + ',';
 						break;
 					case 'bottom-right':
 						textshadow += i + 'px ' + i + 'px 0 ' + color + ',';

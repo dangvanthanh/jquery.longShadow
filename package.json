@@ -18,5 +18,15 @@
   "license": "MIT",
   "devDependencies": {
     "xo": "^0.14.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "browser",
+      "node"
+    ],
+    "plugins": [
+      "jquery"
+    ]
   }
 }

@@ -31,8 +31,8 @@
 
 	Plugin.prototype = {
 		init: function() {
-			var textshadow = '',
-					color = this.options.colorShadow;
+			var textshadow = '';
+			var color = this.options.colorShadow;
 
 			for (var i = 0; i < this.options.sizeShadow; i++) {
 				switch (this.options.directionShadow) {

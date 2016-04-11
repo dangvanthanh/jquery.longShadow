@@ -4,7 +4,7 @@
   "description": "----------------------------------------------",
   "main": "jquery.longShadow.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "xo jquery.longShadow.js"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   ],
   "author": "Dang Van Thanh",
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "gitHead": "322b039f1568fc5c894de0f98c496afe53a0df81"
+  "devDependencies": {
+    "xo": "^0.14.0"
+  }
 }

@@ -1,5 +1,4 @@
 # Long Shadow jQuery Plugin
-----------------------------------------------
 
 > Easy text-shadow with long shadow jquery plugin
 
@@ -23,4 +22,12 @@ Option | Type | Default Value | Description
 |---|---|---|---|
 | colorShadow | String | #ccc | Color of text-shadow (HEX, RGB, RGBA) |
 | sizeShadow | Integer | 50 | Numbers value of text-shadow  |
-| directionShadow | String | bottom-right | Direction of text-shadow. Currently, have 8 direction: <ul><li>top</li><li>right</li><li>bottom</li><li>left</li><li>top-right</li><li>top-left</li><li>bottom-right</li><li>bottom-left</li></ul |
+| directionShadow | String | bottom-right | Direction of text-shadow. Currently, have 8 direction: 
+- top
+- right
+- bottom
+- left
+- top-right
+- top-left
+- bottom-right
+- bottom-left |

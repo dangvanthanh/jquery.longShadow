@@ -4,7 +4,7 @@
   "description": "----------------------------------------------",
   "main": "jquery.longShadow.js",
   "scripts": {
-    "test": "xo jquery.longShadow.js"
+    "test": "xo"
   },
   "repository": {
     "type": "git",
@@ -23,10 +23,12 @@
     "esnext": true,
     "envs": [
       "browser",
-      "node"
-    ],
-    "plugins": [
+      "node",
+      "es6",
       "jquery"
-    ]
+    ],
+    "rules": {
+      "linebreak-style": [0, "unix"]
+    }
   }
 }

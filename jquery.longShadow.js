@@ -5,15 +5,16 @@
 * Source: git://github.com/dangvanthanh/jquery.longShadow.git
 * Licensed under MIT 
 */
-;(function($, window, document, undefined) {
+;(function($, window, document) {
+	'use strict';
 
-	// Name Long Shadow Query Plugin and Parameters
-	var pluginName = 'longShadow',
-			defaults = {
-				colorShadow: '#ccc',
-				sizeShadow: 50,
-				directionShadow: '' // Default bottom-right
-			};
+	// Name long shadow query plugin and parameters
+	var pluginName = 'longShadow';
+	var defaults = {
+		colorShadow: '#ccc',
+		sizeShadow: 50,
+		directionShadow: '' // Default bottom-right
+	};
 
 	// Long Shadow Plugin
 	function Plugin(element, options) {
@@ -34,7 +35,7 @@
 			var textshadow = '';
 			var color = this.options.colorShadow;
 
-			for (var i = 0; i < this.options.sizeShadow; i++) {
+			for (var i = 0, len = this.options.sizeShadow; i < len; i++) {
 				switch (this.options.directionShadow) {
 					case 'top':
 						textshadow += '0 ' + -i + 'px 0' + color + ',';
@@ -79,5 +80,4 @@
 			}
 		});
 	};
-
 })(jQuery, window, document);

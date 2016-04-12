@@ -16,9 +16,20 @@ $(selector).longShadow({
 
 ### Available Options
 
-
-| Option  | Type  | Default  | Description | 
-|---|---|---|---|
-| colorShadow | String | #ccc | Color of text-shadow (HEX, RGB, RGBA) |
-| sizeShadow | Integer | 50 | Numbers value of text-shadow  |
-| directionShadow | String | bottom-right | Direction of text-shadow. Currently, have 8 direction: top , right, bottom, left, top-right, top-left, bottom-right, bottom-left |
++-----------------+---------+--------------+--------------------------------------------------------+--+
+| Option          | Type    | Default      | Description                                            |  |
++-----------------+---------+--------------+--------------------------------------------------------+--+
+| colorShadow     | String  | #ccc         | Color of text-shadow (HEX, RGB, RGBA)                  |  |
++-----------------+---------+--------------+--------------------------------------------------------+--+
+| sizeShadow      | Integer | 50           | Numbers value of text-shadow                           |  |
++-----------------+---------+--------------+--------------------------------------------------------+--+
+| directionShadow | String  | bottom-right | Direction of text-shadow. Currently, have 8 direction: |  |
+|                 |         |              |                                                        |  |
+|                 |         |              | - top                                                  |  |
+|                 |         |              | - right                                                |  |
+|                 |         |              | - bottom- left                                         |  |
+|                 |         |              | - top-right                                            |  |
+|                 |         |              | - top-left                                             |  |
+|                 |         |              | - bottom-right                                         |  |
+|                 |         |              | - bottom-left                                          |  |
++-----------------+---------+--------------+--------------------------------------------------------+--+

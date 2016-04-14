@@ -1,8 +1,6 @@
-# Long Shadow jQuery Plugin
+# Long Shadow jQuery Plugin [![Build Status: Linux](https://api.travis-ci.org/dangvanthanh/jquery.longShadow.svg?branch=master)](https://travis-ci.org/dangvanthanh/jquery.longShadow)
 
 > Easy text-shadow with long shadow jquery plugin
-
-[![Build Status: Linux](https://api.travis-ci.org/dangvanthanh/jquery.longShadow.svg?branch=master)](https://travis-ci.org/dangvanthanh/jquery.longShadow)
 
 ## Use
 
@@ -15,7 +13,6 @@ $(selector).longShadow({
 ```
 
 ### Available Options
-
 
 | Option  | Type  | Default  | Description | 
 |---|---|---|---|

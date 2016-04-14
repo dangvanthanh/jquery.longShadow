@@ -1,11 +1,11 @@
 /*
 * LongShadow jQuery Plugin
-* Copyright (c) 2013 Dang Van Thanh
-* Version: 1.0.1
+* Copyright (c) 2013 - 2016 Dang Van Thanh
+* Version: 1.1.0
 * Source: git://github.com/dangvanthanh/jquery.longShadow.git
-* Licensed under MIT 
+* Licensed under MIT
 */
-;(function($, window, document) {
+(function ($) {
 	'use strict';
 
 	// Name long shadow query plugin and parameters
@@ -31,7 +31,7 @@
 	}
 
 	Plugin.prototype = {
-		init: function() {
+		init: function () {
 			var textshadow = '';
 			var color = this.options.colorShadow;
 
@@ -47,7 +47,7 @@
 						textshadow += '0 ' + i + 'px 0 ' + color + ',';
 						break;
 					case 'left':
-						textshadow += -i + 'px ' + '0 0 ' + color + ',';
+						textshadow += -i + 'px 0 0 ' + color + ',';
 						break;
 					case 'top-left':
 						textshadow += -i + 'px ' + -i + 'px 0 ' + color + ',';
@@ -73,11 +73,11 @@
 		}
 	};
 
-	$.fn[pluginName] = function(options) {
-		return this.each(function() {
+	$.fn[pluginName] = function (options) {
+		return this.each(function () {
 			if (!$.data(this, 'plugin_' + pluginName)) {
 				$.data(this, 'plugin_' + pluginName, new Plugin(this, options));
 			}
 		});
 	};
-})(jQuery, window, document);
+})(jQuery);

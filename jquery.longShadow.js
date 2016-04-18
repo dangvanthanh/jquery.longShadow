@@ -38,7 +38,7 @@
 			for (var i = 0, len = this.options.sizeShadow; i < len; i++) {
 				switch (this.options.directionShadow) {
 					case 'top':
-						textshadow += '0 ' + -i + 'px 0' + color + ',';
+						textshadow += '0 ' + -i + 'px 0 ' + color + ',';
 						break;
 					case 'right':
 						textshadow += i + 'px 0 0 ' + color + ',';

@@ -1,6 +1,6 @@
 {
   "name": "jquery-longshadow",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "----------------------------------------------",
   "main": "jquery.longShadow.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "xo": {
     "envs": [
-      "browser", 
+      "browser",
       "node",
       "jquery"
     ]

@@ -1,10 +1,10 @@
 {
   "name": "jquery-longshadow",
   "version": "1.1.0",
-  "description": "----------------------------------------------",
+  "description": "Long shadow jquery plugin",
   "main": "jquery.longShadow.js",
   "scripts": {
-    "test": "xo"
+    "test": "standard"
   },
   "repository": {
     "type": "git",
@@ -12,18 +12,18 @@
   },
   "keywords": [
     "javascript",
-    "jquery"
+    "jquery",
+    "jquery plugin"
   ],
   "author": "Dang Van Thanh",
   "license": "MIT",
   "devDependencies": {
-    "xo": "^0.14.0"
+    "standard": "^8.3.0"
   },
-  "xo": {
-    "envs": [
-      "browser",
-      "node",
-      "jquery"
+  "standard": {
+    "globals": [
+      "$",
+      "jQuery"
     ]
   }
 }

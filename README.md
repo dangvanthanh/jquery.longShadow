@@ -23,3 +23,7 @@ $(selector).longShadow({
 | colorShadow | String | #ccc | Color of text-shadow (HEX, RGB, RGBA) |
 | sizeShadow | Integer | 50 | Numbers value of text-shadow  |
 | directionShadow | String | bottom-right | Direction of text-shadow. Currently, have 8 direction: **top**, **right**, **bottom**, **left**, **top-right**, **top-left**, **bottom-right**, **bottom-left** |
+
+## License
+
+MIT © [Dang Van Thanh](http://dangthanh.org)

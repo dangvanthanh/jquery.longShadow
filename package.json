@@ -1,9 +1,10 @@
 {
   "name": "jquery-longshadow",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Long shadow jquery plugin",
-  "main": "jquery.longShadow.js",
+  "main": "dist/jquery.longShadow.js",
   "scripts": {
+    "build": "rollup -c",
     "test": "standard"
   },
   "repository": {
@@ -18,6 +19,9 @@
   "author": "Dang Van Thanh",
   "license": "MIT",
   "devDependencies": {
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-butternut": "^0.1.0",
     "standard": "^8.3.0"
   },
   "standard": {

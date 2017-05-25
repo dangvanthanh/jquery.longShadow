@@ -1,7 +1,7 @@
 /*
 * LongShadow jQuery Plugin
-* Copyright (c) 2013 - 2016 Dang Van Thanh
-* Version: 1.1.0
+* Copyright (c) 2013 - 2017 Dang Van Thanh
+* Version: 1.0.0
 * Source: git://github.com/dangvanthanh/jquery.longShadow.git
 * Licensed under MIT
 */
@@ -38,31 +38,31 @@
       for (var i = 0, len = this.options.sizeShadow; i < len; i++) {
         switch (this.options.directionShadow) {
           case 'top':
-            textshadow += '0 ' + -i + 'px 0 ' + color + ','
+            textshadow += `0 -${i}px 0 ${color},`
             break
           case 'right':
-            textshadow += i + 'px 0 0 ' + color + ','
+            textshadow += `${i}px 0 0 ${color},`
             break
           case 'bottom':
-            textshadow += '0 ' + i + 'px 0 ' + color + ','
+            textshadow += `0 ${i}px 0 ${color},`
             break
           case 'left':
-            textshadow += -i + 'px 0 0 ' + color + ','
+            textshadow += `-${i}px 0 0 ${color},`
             break
           case 'top-left':
-            textshadow += -i + 'px ' + -i + 'px 0 ' + color + ','
+            textshadow += `-${i}px -${i}px 0 ${color},`
             break
           case 'top-right':
-            textshadow += i + 'px ' + -i + 'px 0 ' + color + ','
+            textshadow += `${i}px -${i}px 0 ${color},`
             break
           case 'bottom-left':
-            textshadow += -i + 'px ' + i + 'px 0 ' + color + ','
+            textshadow += `-${i}px ${i}px 0 ${color},`
             break
           case 'bottom-right':
-            textshadow += i + 'px ' + i + 'px 0 ' + color + ','
+            textshadow += `${i}px ${i}px 0 ${color},`
             break
           default:
-            textshadow += i + 'px ' + i + 'px 0 ' + color + ','
+            textshadow += `${i}px ${i}px 0 ${color},`
             break
         }
       }

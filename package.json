@@ -1,11 +1,11 @@
 {
   "name": "jquery-longshadow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Long shadow jquery plugin",
-  "main": "dist/jquery.longShadow.js",
+  "module": "dist/jquery.longShadow.js",
+  "unpkg": "dist/jquery.longShadow.js",
   "scripts": {
-    "build": "rollup -c",
-    "test": "standard"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -19,15 +19,22 @@
   "author": "Dang Van Thanh",
   "license": "MIT",
   "devDependencies": {
-    "rollup": "^0.41.6",
-    "rollup-plugin-buble": "^0.15.0",
-    "rollup-plugin-butternut": "^0.1.0",
-    "standard": "^8.3.0"
+    "rollup": "1.1.0",
+    "rollup-plugin-buble": "0.19.6",
+    "rollup-plugin-uglify": "6.0.1"
   },
-  "standard": {
-    "globals": [
-      "$",
-      "jQuery"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,vue}": [
+      "prettier --write",
+      "git add"
     ]
+  },
+  "peerDependencies": {
+    "jquery": ">= 1.9"
   }
 }

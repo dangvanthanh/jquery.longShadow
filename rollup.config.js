@@ -1,14 +1,18 @@
-import buble from 'rollup-plugin-buble'
-import butternut from 'rollup-plugin-butternut'
+import buble from 'rollup-plugin-buble';
+import { uglify } from 'rollup-plugin-uglify';
+
+const production = !process.env.ROLLUP_WATCH;
 
 export default {
-  entry: './src/jquery.longShadow.js',
-  dest: './dist/jquery.longShadow.js',
-  format: 'es',
+  input: './src/jquery.longShadow.js',
+  output: {
+    file: 'dist/jquery.longShadow.js',
+    format: 'iife'
+  },
   plugins: [
     buble({
       objectAssign: 'Object.assign'
     }),
-    butternut()
+    production && uglify()
   ]
-}
+};

@@ -6,6 +6,12 @@
 
 ![](screenshot.png)
 
+## UNPKG
+
+```html
+<script src="https://unpkg.com/jquery-longshadow"></script>
+```
+
 ## Use
 
 ```js

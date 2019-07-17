@@ -1,6 +1,6 @@
 {
   "name": "jquery-longshadow",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Long shadow jquery plugin",
   "module": "dist/jquery.longShadow.js",
   "unpkg": "dist/jquery.longShadow.js",
@@ -19,9 +19,9 @@
   "author": "Dang Van Thanh",
   "license": "MIT",
   "devDependencies": {
-    "rollup": "1.1.0",
-    "rollup-plugin-buble": "0.19.6",
-    "rollup-plugin-uglify": "6.0.1"
+    "rollup": "1.17.0",
+    "rollup-plugin-buble": "0.19.8",
+    "rollup-plugin-uglify": "6.0.2"
   },
   "husky": {
     "hooks": {

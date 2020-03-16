@@ -1,11 +1,12 @@
 import buble from 'rollup-plugin-buble';
-import { uglify } from 'rollup-plugin-uglify';
+import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
   input: './src/jquery.longShadow.js',
   output: {
+    sourcemap: true,
     file: 'dist/jquery.longShadow.js',
     format: 'iife'
   },
@@ -13,6 +14,6 @@ export default {
     buble({
       objectAssign: 'Object.assign'
     }),
-    production && uglify()
+    production && terser()
   ]
 };

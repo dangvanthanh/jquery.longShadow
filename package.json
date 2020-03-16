@@ -19,9 +19,9 @@
   "author": "Dang Van Thanh",
   "license": "MIT",
   "devDependencies": {
-    "rollup": "1.17.0",
-    "rollup-plugin-buble": "0.19.8",
-    "rollup-plugin-uglify": "6.0.2"
+    "rollup": "^2.0.6",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-terser": "^5.3.0"
   },
   "husky": {
     "hooks": {

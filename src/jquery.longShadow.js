@@ -1,6 +1,6 @@
 /*
  * LongShadow jQuery Plugin
- * Copyright (c) 2013 - 2017 Dang Van Thanh
+ * Copyright (c) 2013 - 2020 Dang Van Thanh
  * Version: 1.0.1
  * Source: git://github.com/dangvanthanh/jquery.longShadow.git
  * Licensed under MIT

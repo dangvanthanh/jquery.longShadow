@@ -1,18 +1,18 @@
 # Long Shadow jQuery Plugin
 
-[![Build Status: Linux](https://api.travis-ci.org/dangvanthanh/jquery.longShadow.svg?branch=master)](https://travis-ci.org/dangvanthanh/jquery.longShadow) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 > Easy text-shadow with long shadow jquery plugin
 
 ![](screenshot.png)
 
-## UNPKG
+## CDN
 
 ```html
 <script src="https://unpkg.com/jquery-longshadow"></script>
 ```
 
-## Use
+## Usage
 
 ```js
 $(selector).longShadow({

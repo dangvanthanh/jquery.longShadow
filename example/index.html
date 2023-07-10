@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery.longshadow</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  </head>
+  <body>
+    <div class="container mx-auto mt-8">
+      <div class="px-4 sm:px-6 lg:px-8">
+        <div class="space-y-6">
+          <div class="flex items-center justify-between max-w-xl mx-auto">
+            <div
+              class="s overflow-hidden w-20 h-20 text-5xl bg-cyan-600 leading-tight font-semibold text-gray-200 flex items-center justify-center rounded-full border-2 border-gray-300"
+            >
+              s
+            </div>
+            <div
+              class="s overflow-hidden w-20 h-20 text-5xl bg-yellow-600 leading-tight font-semibold text-gray-200 flex items-center justify-center rounded-full border-2 border-gray-300"
+            >
+              a
+            </div>
+            <div
+              class="s overflow-hidden w-20 h-20 text-5xl bg-green-600 leading-tight font-semibold text-gray-200 flex items-center justify-center rounded-full border-2 border-gray-300"
+            >
+              s
+            </div>
+            <div
+              class="s overflow-hidden w-20 h-20 text-5xl bg-cyan-600 leading-tight font-semibold text-gray-200 flex items-center justify-center rounded-full border-2 border-gray-300"
+            >
+              s
+            </div>
+          </div>
+          <div class="flex items-center justify-between max-w-xl mx-auto">
+            <div
+              class="s1 overflow-hidden w-20 h-20 text-5xl bg-cyan-600 leading-tight font-semibold text-gray-200 flex items-center justify-center rounded-full border-2 border-gray-300"
+            >
+              s
+            </div>
+            <div
+              class="s1 overflow-hidden w-20 h-20 text-5xl bg-yellow-600 leading-tight font-semibold text-gray-200 flex items-center justify-center rounded-full border-2 border-gray-300"
+            >
+              a
+            </div>
+            <div
+              class="s1 overflow-hidden w-20 h-20 text-5xl bg-green-600 leading-tight font-semibold text-gray-200 flex items-center justify-center rounded-full border-2 border-gray-300"
+            >
+              s
+            </div>
+            <div
+              class="s1 overflow-hidden w-20 h-20 text-5xl bg-cyan-600 leading-tight font-semibold text-gray-200 flex items-center justify-center rounded-full border-2 border-gray-300"
+            >
+              s
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../src/jquery.longShadow.js"></script>
+    <script>
+      $(function () {
+        var positions = [
+          "top-right",
+          "bottom-right",
+          "top-left",
+          "bottom-left",
+        ];
+
+        Array.from(positions).forEach(function (position, index) {
+          $(".s").eq(index).longShadow({
+            colorShadow: "#a13c32",
+            sizeShadow: 5,
+            directionShadow: position,
+          });
+
+          $(".s1").eq(index).longShadow({
+            colorShadow: "#525283",
+            sizeShadow: 50,
+            directionShadow: position,
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,12 +1,11 @@
 {
   "name": "jquery-longshadow",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "description": "Long shadow jquery plugin",
-  "module": "dist/jquery.longShadow.min.js",
-  "unpkg": "dist/jquery.longShadow.min.js",
+  "module": "dist/jquery.longShadow.js",
+  "unpkg": "dist/jquery.longShadow.js",
   "scripts": {
-    "build": "npm run lint && uglifyjs src/jquery.longShadow.js -c -m -o dist/jquery.longShadow.min.js",
-    "lint": "eslint src/*.js"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -20,15 +19,22 @@
   "author": "Dang Van Thanh",
   "license": "MIT",
   "devDependencies": {
-    "@dangvanthanh/prettier-config": "^1.0.0",
-    "eslint": "^8.44.0",
-    "uglify-js": "^3.17.4"
+    "@rollup/plugin-buble": "^0.21.3",
+    "rollup": "^2.77.0",
+    "rollup-plugin-terser": "^7.0.2"
   },
-  "files": [
-    "dist",
-    "src",
-    "package.json",
-    "README.md",
-    "LICENSE"
-  ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "peerDependencies": {
+    "jquery": ">= 1.9"
+  }
 }

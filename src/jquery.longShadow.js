@@ -1,63 +1,64 @@
 /*
  * LongShadow jQuery Plugin
- * Copyright (c) 2023 Dang Van Thanh
- * Version: 1.0.4
+ * Copyright (c) 2013 - 2020 Dang Van Thanh
+ * Version: 1.0.3
  * Source: git://github.com/dangvanthanh/jquery.longShadow.git
  * Licensed under MIT
  */
-(function ($) {
-  "use strict";
+(function($) {
+  'use strict';
 
   // Name long shadow query plugin and parameters
-  const pluginName = "longShadow";
-  const defaults = {
-    colorShadow: "#ccc",
+  var pluginName = 'longShadow';
+  var defaults = {
+    colorShadow: '#ccc',
     sizeShadow: 50,
-    directionShadow: "", // Default bottom-right
+    directionShadow: '' // Default bottom-right
   };
 
   // Long Shadow Plugin
-  class Plugin {
-    constructor(element, options) {
-      this.element = element;
+  function Plugin(element, options) {
+    this.element = element;
 
-      this.options = $.extend({}, defaults, options);
+    this.options = $.extend({}, defaults, options);
 
-      this._defaults = defaults;
-      this._name = pluginName;
+    this._defaults = defaults;
+    this._name = pluginName;
 
-      this._shadow = "";
+    this._shadow = '';
 
-      this.init();
-    }
-    init() {
-      let textshadow = "";
-      const color = this.options.colorShadow;
+    this.init();
+  }
 
-      for (let i = 0, len = this.options.sizeShadow; i < len; i++) {
+  Plugin.prototype = {
+    init: function() {
+      var textshadow = '';
+      var color = this.options.colorShadow;
+
+      for (var i = 0, len = this.options.sizeShadow; i < len; i++) {
         switch (this.options.directionShadow) {
-          case "top":
+          case 'top':
             textshadow += `0 -${i}px 0 ${color},`;
             break;
-          case "right":
+          case 'right':
             textshadow += `${i}px 0 0 ${color},`;
             break;
-          case "bottom":
+          case 'bottom':
             textshadow += `0 ${i}px 0 ${color},`;
             break;
-          case "left":
+          case 'left':
             textshadow += `-${i}px 0 0 ${color},`;
             break;
-          case "top-left":
+          case 'top-left':
             textshadow += `-${i}px -${i}px 0 ${color},`;
             break;
-          case "top-right":
+          case 'top-right':
             textshadow += `${i}px -${i}px 0 ${color},`;
             break;
-          case "bottom-left":
+          case 'bottom-left':
             textshadow += `-${i}px ${i}px 0 ${color},`;
             break;
-          case "bottom-right":
+          case 'bottom-right':
             textshadow += `${i}px ${i}px 0 ${color},`;
             break;
           default:
@@ -70,12 +71,12 @@
 
       this.element.style.textShadow = this._shadow;
     }
-  }
+  };
 
-  $.fn[pluginName] = function (options) {
-    return this.each(function () {
-      if (!$.data(this, "plugin_" + pluginName)) {
-        $.data(this, "plugin_" + pluginName, new Plugin(this, options));
+  $.fn[pluginName] = function(options) {
+    return this.each(function() {
+      if (!$.data(this, 'plugin_' + pluginName)) {
+        $.data(this, 'plugin_' + pluginName, new Plugin(this, options));
       }
     });
   };
